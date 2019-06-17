@@ -1,1 +1,1 @@
-alert("Funcf")
+alert("itens todo")
