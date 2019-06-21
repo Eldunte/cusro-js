@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Módulo 1, exercicio 2</title>
 </head>
+
 <body>
     <script>
-        function par(x,y){
-            if (x/2==0 && y/2==0 ) {
-                console.log(x,y)
-                
+        function par(x, y) {
+            for (var numero = x; numero <= y; numero++) {
+                if (numero % 2 == 0) {
+                    console.log(numero)
+
+                }
             }
-            
-        };
-        par(1, 15);
-    
+
+        }
+
+        par(32, 321);
+
     </script>
-    
+
 </body>
+
 </html>
