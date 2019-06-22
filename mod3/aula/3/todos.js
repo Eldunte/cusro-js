@@ -10,3 +10,12 @@ var itensTODO = [
     `*entrar na comunidade`
 ];
 
+function renderizarTODOS()
+{
+    for(todo of itensTODO){
+        var todoElement = document.createElement('li')
+        var todoText = document.createTextNode(todo)
+    };
+};
+
+renderizarTODOS();
