@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>modulo 2, exercicio 4</title>
+</head>
+
+<body>
+    <ul> </ul>
+    <script>
+        var nomes = [
+            "Reinaldo",
+            "Lucas",
+            "Julia"
+
+        ];
+        var listaElement = document.querySelector('ul')
+
+
+        for (nome of nomes) {
+            var lista = document.createElement('li');
+            var texto = document.createTextNode(nome);
+
+            lista.appendChild(texto);
+            listaElement.appendChild(lista);
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
