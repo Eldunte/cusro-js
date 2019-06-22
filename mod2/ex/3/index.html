@@ -17,11 +17,14 @@
             "Julia"
 
         ];
+        var listaElement = document.querySelector('ul')
+
+
         for (nome of nomes) {
-            var lista = document.createElement('list');
+            var lista = document.createElement('li');
             var texto = document.createTextNode(nome);
 
-            textoElement.appendChild(texto);
+            lista.appendChild(texto);
             listaElement.appendChild(lista);
 
 
