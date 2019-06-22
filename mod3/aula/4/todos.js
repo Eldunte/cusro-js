@@ -22,3 +22,11 @@ function renderizarTODOS()
 };
 
 renderizarTODOS();
+
+function AddcionarTodo(){
+    var todoText = inputElement.value
+    
+    itensTODO.push(todoText);
+    inputElement.value = "";
+    renderizarTODOS();
+}
