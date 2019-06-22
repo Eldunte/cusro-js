@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Módulo 1, exercio 4</title>
 </head>
+
 <body>
     <script>
-        function experiencia(ano){
-            if (ano <=0) {
-                return("Iniciante")
+        function experiencia(ano) {
+            if (ano <= 1) {
+                return ("Iniciante")
             }
-            if (ano > 1 || ano <= 3) {
-                return("intermediario")
+            else if (ano > 1 && ano <= 3) {
+                return ("intermediario")
             }
 
+
+            else if (ano > 3 && ano <= 6) {
+                return ("avançado")
+            }
+
+            else if (ano >= 7) {
+                return ("Mestre Jedi Tunado")
+            }
         }
-        //0
-    
+        anos=7
+        console.log(experiencia(anos))
+
+
     </script>
-    
+
 </body>
+
 </html>
