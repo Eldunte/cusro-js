@@ -30,14 +30,16 @@
             }
             return color;
         }
+        
 
 
-        botaoElement.onclick = function () {
+        botaoElement.onclick = function() {
             var quadrado = document.createElement('div')
 
             quadrado.style.width = '100px';
             quadrado.style.height = '100px';
-            quadrado.style.backgroundColor = '#F00';
+            quadrado.style.backgroundColor == '#F00';
+            
             quadrado.onmouseover= function(){
                 quadrado.style.backgroundColor = getRandomColor();
 
