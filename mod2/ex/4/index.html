@@ -10,6 +10,10 @@
 
 <body>
     <ul> </ul>
+
+    <input type="text" name="nome">
+    <button onClick="adicionarNome()">Adicionar</button>
+
     <script>
         var nomes = [
             "Reinaldo",
@@ -18,17 +22,30 @@
 
         ];
         var listaElement = document.querySelector('ul')
+        var inputElement = document.querySelector('input')
 
-
-        for (nome of nomes) {
+        function adicionarItem(texto) {
             var lista = document.createElement('li');
-            var texto = document.createTextNode(nome);
+            var texto = document.createTextNode(texto);
 
             lista.appendChild(texto);
             listaElement.appendChild(lista);
 
+        }
+        function adicionarNome() {
+            adicionarItem(inputElement.value)
+            inputElement.value = "";
 
         }
+
+
+        for (nome of nomes) {
+            adicionarItem(nome)
+
+
+
+        }
+
 
     </script>
 
