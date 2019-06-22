@@ -10,9 +10,10 @@ var itensTODO = [
     `entrar na comunidade`
 ];
 
-function renderizarTODOS()
-{
-    for(todo of itensTODO){
+function renderizarTODOS() {
+    listElement.innerHTML = "";
+
+    for (todo of itensTODO) {
         var todoElement = document.createElement('li')
         var todoText = document.createTextNode(todo)
 
@@ -23,10 +24,12 @@ function renderizarTODOS()
 
 renderizarTODOS();
 
-function AddcionarTodo(){
+function AdicionarTodo() {
     var todoText = inputElement.value
-    
+
     itensTODO.push(todoText);
     inputElement.value = "";
     renderizarTODOS();
 }
+
+inputButton.onclick = AdicionarTodo;
