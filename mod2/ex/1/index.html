@@ -17,15 +17,16 @@
 
         <script>
             var botao = document.getElementById('botão');
-            var quadrados =document.getElementById('quadrado')
+            var quadrados = document.getElementById('quadrado');
 
+            botao.onclick = function () {
+                var quadrado = document.crateElement('div')
+                
+                quadrado.style.width = '100px';
+                quadrado.style.height = '100px';
+                quadrado.style.backgroundColor = '#F00';
+            }
 
-
-
-            var quadrado = document.getElementById('quadrado');
-            app.style.backgroundColor = "red";
-            app.style.width = "300px";
-            app.style.height = "250px"
         </script>
 
 
