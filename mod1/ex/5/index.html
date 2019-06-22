@@ -12,8 +12,8 @@
     <script>
         function mostrarHabilidades(usuario) {
             for (usuario of usuario) {
-                console.log("O usuario" + usuario.nome + "possui a habilidade"
-                    + usuario.habilidade.join("", ""));
+                console.log("O usuario " + usuario.nome + " possui as habilidades: "
+                    + usuario.habilidade.join( " e "));
             }
         };
 
@@ -30,7 +30,8 @@
             }
         ]
 
-       
+        mostrarHabilidades(usuario);
+
     </script>
 </body>
 
