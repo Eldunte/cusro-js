@@ -17,8 +17,13 @@ function renderizarTODOS() {
         var todoElement = document.createElement('li')
         var todoText = document.createTextNode(todo)
 
-        var linkElement =document.createElement('a');
+        var linkElement = document.createElement('a');
         var linkText = document.createTextNode('Excluir');
+
+        var pos = itensTODO.indexOf(todo);
+        linkElement.setAttribute('onclick', 'deleteTodo('+ pos +')')
+
+        linkElement.setAttribute('href', '#')
 
         linkElement.appendChild(linkText);
 
@@ -41,3 +46,9 @@ function AdicionarTodo() {
 }
 
 inputButton.onclick = AdicionarTodo;
+
+function deleteTodo(pos){
+
+    itensTODO.splice(0, 1);
+    renderizarTODOS();
+}
