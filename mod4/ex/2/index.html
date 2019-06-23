@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 4, exercício 2</title>
+</head>
+
+<body>
+    <input type="text" name="user">
+    <button onclick="">Adicionar</button>
+
+
+    <ul></ul>
+
+    <script>
+        var listElement = document.querySelector('ul')
+        var inputElement = document.querySelector('input')
+
+        function renderizarRepos(repositorios) {
+            for (repo of repositorios) {
+                const textElement  = document.createTextNode(repo.nome)
+                const listElementElement  = document.createAttribute('li')
+
+                listElement.appendChild(textElement);
+               
+
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
