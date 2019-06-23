@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Módulo 4, exercicio 1</title>
 </head>
+
 <body>
-    
+    <script>
+        function checarIdade(idade) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    return idade >= 18 ? resolve() : reject();
+                }, 2000);
+            });
+        }
+
+        checarIdade(18)
+            .then(function () {
+                console.log("Você é maior de 18 anos amigo")
+            })
+            .catch(function () {
+                console.log("você é menor de 18 moleque >:(")
+
+            }
+
+            )
+
+
+    </script>
 </body>
+
 </html>
