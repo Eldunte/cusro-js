@@ -4,7 +4,7 @@ var inputElement = document.querySelector("#app input");
 
 var inputButton = document.querySelector("#app button");
 
-var itensTODO = JSON.parse(localStorage.getItem('list_todos')|| []);
+var itensTODO = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 function renderizarTODOS() {
     listElement.innerHTML = "";
