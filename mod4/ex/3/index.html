@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Módulo 4, exercício 2</title>
+    <title>Módulo 4, exercício 3</title>
 </head>
 
 <body>
@@ -42,6 +42,15 @@
         }
         function renderizarErro(loading)
          {
+             listElement.innerHTML = ""
+
+             textElement.createTextNode("Erro :D")
+             errorElement.createElement('li');
+
+             errorElement.style.color = '#F00'
+
+             errorElement.appendChild(textElement);
+             listElement.appendChild(errorElement);
             
         }
         
