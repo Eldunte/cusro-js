@@ -41,16 +41,19 @@
 
         }
 
+
         function renderizarErro(loading) {
             listElement.innerHTML = ""
 
-            textElement.createTextNode("Erro :D")
-            errorElement.createElement('li');
+            textElement = document.createTextNode("Erro!")
+            errorElement = document.createElement('li');
 
             errorElement.style.color = '#F00'
 
             errorElement.appendChild(textElement);
             listElement.appendChild(errorElement);
+
+            
 
         }
 
@@ -63,7 +66,14 @@
                 .then(function (response) {
                     console.log(response.data);
                     renderizarRepos(response.data);
+                    renderizarLoading();
                 })
+                .catch (function (){
+                    renderizarErro();
+
+                }
+                
+                )
         }
     </script>
 
