@@ -22,9 +22,10 @@
 
         function renderizarRepos(repositorios) {
             for (repo of repositorios) {
-                const textElement = document.createTextNode(repo.nome)
+                const textElement = document.createTextNode(repo.name)
                 const lieElement = document.createElement('li')
                 lieElement.appendChild(textElement);
+                console.log(lieElement);
                 listElement.appendChild(lieElement);
             }
         }
@@ -32,9 +33,10 @@
         function ListarRepositorios() {
             var user = inputElement.value;
             if (!user) return;
-            //https://github.com/Eldunte/rocketseat-cursojs
-            axios.get('https://github.com/' + user + '/rocketseat-cursojs')
+          
+            axios.get(' https://api.github.com/users/'+user+'/repos')
                 .then(function (response) {
+                    console.log(response.data);
                     renderizarRepos(response.data);
                 })
         }

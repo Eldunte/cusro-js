@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 4, exercício 2</title>
+</head>
+
+<body>
+    <input type="text" name="user">
+    <button onclick="ListarRepositorios()">Adicionar</button>
+
+
+    <ul></ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var listElement = document.querySelector('ul')
+        var inputElement = document.querySelector('input')
+
+        function renderizarRepos(repositorios) {
+            for (repo of repositorios) {
+                const textElement = document.createTextNode(repo.name)
+                const lieElement = document.createElement('li')
+                lieElement.appendChild(textElement);
+                console.log(lieElement);
+                listElement.appendChild(lieElement);
+            }
+        }
+
+        function ListarRepositorios() {
+            var user = inputElement.value;
+            if (!user) return;
+          
+            axios.get(' https://api.github.com/users/'+user+'/repos')
+                .then(function (response) {
+                    console.log(response.data);
+                    renderizarRepos(response.data);
+                })
+        }
+    </script>
+
+</body>
+
+</html>
