@@ -29,7 +29,7 @@
             }
         }
 
-        function renderizarLoading() {
+        function renderizarLoading(loading) {
          listElement.innerHTML  = ""
 
          var textElement = document.createTextNode("carregando...carregando")
@@ -40,6 +40,11 @@
          listElement.appendChild(loadingElement);
             
         }
+        function renderizarErro(loading)
+         {
+            
+        }
+        
 
         function ListarRepositorios() {
             var user = inputElement.value;
