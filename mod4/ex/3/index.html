@@ -25,16 +25,23 @@
                 const textElement = document.createTextNode(repo.name)
                 const lieElement = document.createElement('li')
                 lieElement.appendChild(textElement);
-                console.log(lieElement);
                 listElement.appendChild(lieElement);
             }
+        }
+
+        function renderizarLoading() {
+         listElement.innerHTML  = ""
+
+         var textElement = document.createTextNode("carregando...carregando")
+         var loadingElement = document.createElement('li')
+            
         }
 
         function ListarRepositorios() {
             var user = inputElement.value;
             if (!user) return;
-          
-            axios.get(' https://api.github.com/users/'+user+'/repos')
+
+            axios.get(' https://api.github.com/users/' + user + '/repos')
                 .then(function (response) {
                     console.log(response.data);
                     renderizarRepos(response.data);
